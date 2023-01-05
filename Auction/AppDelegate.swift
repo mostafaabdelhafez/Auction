@@ -6,13 +6,57 @@
 //
 
 import UIKit
-
+import Moya
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        MoyaProvider<Requests>().request(.categories) { result in
+//            switch result{
+//            case .success(let response):
+//                print(response.data)
+//
+//                do{
+//                    let data = try response.map(BaseModel<CategoryData>.self)
+//                    print(data.msg ?? "")
+//                    print(data.data?.categories?[5])
+//
+//
+//                }
+//                catch{
+//
+//                }
+//
+//            case .failure(let error):
+//                print(error)
+//
+//            }
+//        }
+        MoyaProvider<Requests>().request(.optionChild(id: 51656)) { result in
+            switch result{
+            case .success(let response):
+                print(response.data)
+                
+                
+                do{
+                    let data = try response.map(BaseModel<[SubCategory]>.self)
+                    print(data.msg ?? "")
+                    print(data.data?[0].options?.count)
+
+                    
+                }
+                catch{
+                    
+                }
+
+            case .failure(let error):
+                print(error)
+
+            }
+        }
+
         // Override point for customization after application launch.
         return true
     }
