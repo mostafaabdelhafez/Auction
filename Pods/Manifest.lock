@@ -1,22 +1,48 @@
 PODS:
   - Alamofire (5.6.4)
+  - DropDown (2.3.13)
+  - iOSDropDown (0.4.0)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SearchTextField (1.2.4)
 
 DEPENDENCIES:
+  - DropDown
+  - iOSDropDown
   - Moya (~> 14.0)
+  - RxCocoa (= 6.5.0)
+  - RxSwift (= 6.5.0)
+  - SearchTextField
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DropDown
+    - iOSDropDown
     - Moya
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SearchTextField
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
 
-PODFILE CHECKSUM: 162b1b54b935bb326a28dbe54de0670a0a1f3a2a
+PODFILE CHECKSUM: cff2c1c2f34211c245f191f9bac0fb3858acb558
 
 COCOAPODS: 1.11.3

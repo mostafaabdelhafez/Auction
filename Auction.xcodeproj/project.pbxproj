@@ -10,6 +10,9 @@
 		34FFAEF25D8B55530AFC9C71 /* Pods_Auction_AuctionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE7758BE6E8EC13A0E808E9 /* Pods_Auction_AuctionUITests.framework */; };
 		AB972329C48826B906A0368F /* Pods_AuctionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD81E1412E13B7AF049F4878 /* Pods_AuctionTests.framework */; };
 		B2FF793F30C3CB4281739C55 /* Pods_Auction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFE3F70FB939163118B1453 /* Pods_Auction.framework */; };
+		D43E7794296A61D8004B98E4 /* DropDownFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43E7793296A61D8004B98E4 /* DropDownFactory.swift */; };
+		D4C625452968941100CCCB08 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C625442968941100CCCB08 /* ViewModel.swift */; };
+		D4C625472968942800CCCB08 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C625462968942800CCCB08 /* ApiServices.swift */; };
 		D4EF1B2B2964EDEE0067E5DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EF1B2A2964EDEE0067E5DD /* AppDelegate.swift */; };
 		D4EF1B2D2964EDEE0067E5DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EF1B2C2964EDEE0067E5DD /* SceneDelegate.swift */; };
 		D4EF1B322964EDEE0067E5DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4EF1B302964EDEE0067E5DD /* Main.storyboard */; };
@@ -51,6 +54,9 @@
 		AEE7758BE6E8EC13A0E808E9 /* Pods_Auction_AuctionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auction_AuctionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD81E1412E13B7AF049F4878 /* Pods_AuctionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuctionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40A373475F074679B3300E4 /* Pods-Auction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auction.release.xcconfig"; path = "Target Support Files/Pods-Auction/Pods-Auction.release.xcconfig"; sourceTree = "<group>"; };
+		D43E7793296A61D8004B98E4 /* DropDownFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownFactory.swift; sourceTree = "<group>"; };
+		D4C625442968941100CCCB08 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D4C625462968942800CCCB08 /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
 		D4EF1B272964EDEE0067E5DD /* Auction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EF1B2A2964EDEE0067E5DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4EF1B2C2964EDEE0067E5DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +194,9 @@
 			children = (
 				D4EF1B75296638BB0067E5DD /* Model */,
 				D4EF1B612964F8450067E5DD /* View */,
+				D4C625442968941100CCCB08 /* ViewModel.swift */,
+				D4C625462968942800CCCB08 /* ApiServices.swift */,
+				D43E7793296A61D8004B98E4 /* DropDownFactory.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -471,11 +480,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EF1B2B2964EDEE0067E5DD /* AppDelegate.swift in Sources */,
+				D43E7794296A61D8004B98E4 /* DropDownFactory.swift in Sources */,
 				D4EF1B2D2964EDEE0067E5DD /* SceneDelegate.swift in Sources */,
 				D4EF1B5C2964EE1E0067E5DD /* CustomTextField.swift in Sources */,
 				D4EF1B74296627730067E5DD /* Requests.swift in Sources */,
 				D4EF1B77296638CC0067E5DD /* CategoryModel.swift in Sources */,
 				D4EF1B5F2964EE910067E5DD /* Extensions.swift in Sources */,
+				D4C625472968942800CCCB08 /* ApiServices.swift in Sources */,
+				D4C625452968941100CCCB08 /* ViewModel.swift in Sources */,
 				D4EF1B642964F8640067E5DD /* PropertiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

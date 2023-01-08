@@ -8,7 +8,11 @@ target 'Auction' do
   # Pods for Auction
 
    pod 'Moya', '~> 14.0'
-
+   pod 'RxSwift', '6.5.0'
+   pod 'RxCocoa', '6.5.0'
+   pod "SearchTextField"
+   pod 'DropDown'
+   pod 'iOSDropDown'
   target 'AuctionTests' do
     inherit! :search_paths
     # Pods for testing

@@ -37,3 +37,7 @@ struct SubCategory:Codable{
     var slug:String?
     var options:[Option]?
 }
+struct DropDownModel{
+var name:String
+var id:Int
+}

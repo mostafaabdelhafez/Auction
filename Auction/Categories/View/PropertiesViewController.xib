@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PropertiesViewController" customModule="Auction" customModuleProvider="target">
             <connections>
+                <outlet property="categoryTextField" destination="vzS-lb-C6H" id="qKz-cg-Zi7"/>
+                <outlet property="propertyTextField" destination="0n6-QS-cQS" id="eJ8-Kg-M7d"/>
+                <outlet property="stack" destination="3GV-0H-QNN" id="l9o-Ge-Vsx"/>
+                <outlet property="subCategoryTextField" destination="pwP-Zn-8Mu" id="NIG-Y1-C8f"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,22 +22,68 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzS-lb-C6H" customClass="TitledTextField" customModule="Auction" customModuleProvider="target">
-                    <rect key="frame" x="16" y="107" width="382" height="80"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4e-wA-Vl6">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhU-H1-4wm">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3GV-0H-QNN">
+                                    <rect key="frame" x="8" y="0.0" width="398" height="220"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzS-lb-C6H" customClass="TitledTextField" customModule="Auction" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="60"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="bKy-D8-mpp"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwP-Zn-8Mu" customClass="TitledTextField" customModule="Auction" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="80" width="398" height="60"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="WUq-9N-Ads"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n6-QS-cQS" customClass="TitledTextField" customModule="Auction" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="160" width="398" height="60"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="0LQ-Jf-1GO"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="3GV-0H-QNN" secondAttribute="trailing" constant="8" id="fm6-Pc-B7n"/>
+                                <constraint firstItem="3GV-0H-QNN" firstAttribute="top" secondItem="KhU-H1-4wm" secondAttribute="top" id="mju-zq-zk1"/>
+                                <constraint firstItem="3GV-0H-QNN" firstAttribute="leading" secondItem="KhU-H1-4wm" secondAttribute="leading" constant="8" id="q2v-xx-ee7"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="bKy-D8-mpp"/>
+                        <constraint firstItem="KhU-H1-4wm" firstAttribute="width" secondItem="c4e-wA-Vl6" secondAttribute="width" id="AAD-YW-HpH"/>
+                        <constraint firstItem="KhU-H1-4wm" firstAttribute="height" secondItem="c4e-wA-Vl6" secondAttribute="height" id="YzB-PJ-BW5"/>
+                        <constraint firstItem="KhU-H1-4wm" firstAttribute="leading" secondItem="c4e-wA-Vl6" secondAttribute="leading" id="hC1-Ja-9dz"/>
+                        <constraint firstItem="KhU-H1-4wm" firstAttribute="top" secondItem="c4e-wA-Vl6" secondAttribute="top" id="o4q-dK-ltu"/>
+                        <constraint firstAttribute="trailing" secondItem="KhU-H1-4wm" secondAttribute="trailing" id="wGA-Pk-Qeh"/>
+                        <constraint firstAttribute="bottom" secondItem="KhU-H1-4wm" secondAttribute="bottom" id="wzz-1N-PJT"/>
                     </constraints>
-                </view>
+                    <viewLayoutGuide key="contentLayoutGuide" id="dGs-3S-87K"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Wg8-2j-N6Z"/>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vzS-lb-C6H" secondAttribute="trailing" constant="16" id="f6x-Y0-ms9"/>
-                <constraint firstItem="vzS-lb-C6H" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="63" id="nVT-he-JY7"/>
-                <constraint firstItem="vzS-lb-C6H" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="vuI-Pk-lwQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="c4e-wA-Vl6" secondAttribute="bottom" id="apr-es-Agj"/>
+                <constraint firstItem="c4e-wA-Vl6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="m03-Hw-Hd6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c4e-wA-Vl6" secondAttribute="trailing" id="nHH-qQ-uAc"/>
+                <constraint firstItem="c4e-wA-Vl6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="x9J-Es-DYC"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="112"/>
+            <point key="canvasLocation" x="137.68115942028987" y="111.83035714285714"/>
         </view>
     </objects>
     <resources>
