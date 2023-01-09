@@ -23,14 +23,22 @@ class ViewModel{
     func getCategories(){
         apiService.getCategories { model, message, error in
             if model != nil {
-                self.categoriesSubject.onNext(model!)
+                let otherModel = CategoryChild(id: 0, name: "other", description: nil, slug: nil, children: nil)
+                var flatenModel = model!
+                flatenModel.append(otherModel)
+                self.categoriesSubject.onNext(flatenModel)
             }
         }
     }
     func getProperties(id:Int,parent:String){
         apiService.getProperties(with: id) { model, message, error in
             if model != nil {
-                let dictionary = [parent:model!]
+                
+                let otherModel = SubCategory(id: 0, name: "other", description: nil, slug: nil, options: nil)
+                var flatenModel = model!
+                flatenModel.append(otherModel)
+
+                let dictionary = [parent:flatenModel]
                 self.propertiesSubject.onNext(dictionary)
 
             }
@@ -39,7 +47,12 @@ class ViewModel{
     func getPropertyChild(id:Int,parent:String){
         apiService.getPropertyChild(with: id) { model, message, error in
             if model != nil{
-                let dictionary = [parent:model!]
+                
+                let otherModel = SubCategory(id: 0, name: "other", description: nil, slug: nil, options: nil)
+                var flatenModel = model!
+                flatenModel.append(otherModel)
+
+                let dictionary = [parent:flatenModel]
                 self.propertyChildSubject.onNext(dictionary)
             }
         }

@@ -11,6 +11,13 @@
 		AB972329C48826B906A0368F /* Pods_AuctionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD81E1412E13B7AF049F4878 /* Pods_AuctionTests.framework */; };
 		B2FF793F30C3CB4281739C55 /* Pods_Auction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFE3F70FB939163118B1453 /* Pods_Auction.framework */; };
 		D43E7794296A61D8004B98E4 /* DropDownFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43E7793296A61D8004B98E4 /* DropDownFactory.swift */; };
+		D43E7796296B6894004B98E4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43E7795296B6894004B98E4 /* Helpers.swift */; };
+		D4AD8A9E296C4C170069C4D0 /* AuctionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD8A9C296C4C170069C4D0 /* AuctionDetailsViewController.swift */; };
+		D4AD8A9F296C4C170069C4D0 /* AuctionDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD8A9D296C4C170069C4D0 /* AuctionDetailsViewController.xib */; };
+		D4AD8AA2296C4CA80069C4D0 /* AuctionDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD8AA1296C4CA80069C4D0 /* AuctionDetailsHeader.swift */; };
+		D4AD8AA4296C4CB40069C4D0 /* AuctionDetailsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD8AA3296C4CB40069C4D0 /* AuctionDetailsHeader.xib */; };
+		D4AD8AA8296C5ED60069C4D0 /* AuctionDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AD8AA6296C5ED60069C4D0 /* AuctionDetailsTableViewCell.swift */; };
+		D4AD8AA9296C5ED60069C4D0 /* AuctionDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD8AA7296C5ED60069C4D0 /* AuctionDetailsTableViewCell.xib */; };
 		D4C625452968941100CCCB08 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C625442968941100CCCB08 /* ViewModel.swift */; };
 		D4C625472968942800CCCB08 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C625462968942800CCCB08 /* ApiServices.swift */; };
 		D4EF1B2B2964EDEE0067E5DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EF1B2A2964EDEE0067E5DD /* AppDelegate.swift */; };
@@ -55,6 +62,13 @@
 		BD81E1412E13B7AF049F4878 /* Pods_AuctionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuctionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40A373475F074679B3300E4 /* Pods-Auction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auction.release.xcconfig"; path = "Target Support Files/Pods-Auction/Pods-Auction.release.xcconfig"; sourceTree = "<group>"; };
 		D43E7793296A61D8004B98E4 /* DropDownFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownFactory.swift; sourceTree = "<group>"; };
+		D43E7795296B6894004B98E4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		D4AD8A9C296C4C170069C4D0 /* AuctionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionDetailsViewController.swift; sourceTree = "<group>"; };
+		D4AD8A9D296C4C170069C4D0 /* AuctionDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionDetailsViewController.xib; sourceTree = "<group>"; };
+		D4AD8AA1296C4CA80069C4D0 /* AuctionDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionDetailsHeader.swift; sourceTree = "<group>"; };
+		D4AD8AA3296C4CB40069C4D0 /* AuctionDetailsHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionDetailsHeader.xib; sourceTree = "<group>"; };
+		D4AD8AA6296C5ED60069C4D0 /* AuctionDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		D4AD8AA7296C5ED60069C4D0 /* AuctionDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		D4C625442968941100CCCB08 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D4C625462968942800CCCB08 /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
 		D4EF1B272964EDEE0067E5DD /* Auction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auction.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +131,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D4AD8A9B296C4BF60069C4D0 /* AuctionDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D4AD8AA5296C5EC10069C4D0 /* Cell */,
+				D4AD8AA0296C4C8A0069C4D0 /* Header */,
+				D4AD8A9C296C4C170069C4D0 /* AuctionDetailsViewController.swift */,
+				D4AD8A9D296C4C170069C4D0 /* AuctionDetailsViewController.xib */,
+			);
+			path = AuctionDetails;
+			sourceTree = "<group>";
+		};
+		D4AD8AA0296C4C8A0069C4D0 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				D4AD8AA1296C4CA80069C4D0 /* AuctionDetailsHeader.swift */,
+				D4AD8AA3296C4CB40069C4D0 /* AuctionDetailsHeader.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		D4AD8AA5296C5EC10069C4D0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D4AD8AA6296C5ED60069C4D0 /* AuctionDetailsTableViewCell.swift */,
+				D4AD8AA7296C5ED60069C4D0 /* AuctionDetailsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D4EF1B1E2964EDEE0067E5DD = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +185,7 @@
 		D4EF1B292964EDEE0067E5DD /* Auction */ = {
 			isa = PBXGroup;
 			children = (
+				D4AD8A9B296C4BF60069C4D0 /* AuctionDetails */,
 				D4EF1B6629658A9B0067E5DD /* Networking */,
 				D4EF1B602964F83D0067E5DD /* Categories */,
 				D4EF1B5D2964EE860067E5DD /* Helpers */,
@@ -185,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				D4EF1B5E2964EE910067E5DD /* Extensions.swift */,
+				D43E7795296B6894004B98E4 /* Helpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -349,7 +394,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EF1B372964EDEF0067E5DD /* LaunchScreen.storyboard in Resources */,
+				D4AD8AA9296C5ED60069C4D0 /* AuctionDetailsTableViewCell.xib in Resources */,
 				D4EF1B652964F8640067E5DD /* PropertiesViewController.xib in Resources */,
+				D4AD8A9F296C4C170069C4D0 /* AuctionDetailsViewController.xib in Resources */,
+				D4AD8AA4296C4CB40069C4D0 /* AuctionDetailsHeader.xib in Resources */,
 				D4EF1B342964EDEF0067E5DD /* Assets.xcassets in Resources */,
 				D4EF1B322964EDEE0067E5DD /* Main.storyboard in Resources */,
 			);
@@ -480,14 +528,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EF1B2B2964EDEE0067E5DD /* AppDelegate.swift in Sources */,
+				D4AD8A9E296C4C170069C4D0 /* AuctionDetailsViewController.swift in Sources */,
+				D4AD8AA2296C4CA80069C4D0 /* AuctionDetailsHeader.swift in Sources */,
 				D43E7794296A61D8004B98E4 /* DropDownFactory.swift in Sources */,
 				D4EF1B2D2964EDEE0067E5DD /* SceneDelegate.swift in Sources */,
 				D4EF1B5C2964EE1E0067E5DD /* CustomTextField.swift in Sources */,
+				D43E7796296B6894004B98E4 /* Helpers.swift in Sources */,
 				D4EF1B74296627730067E5DD /* Requests.swift in Sources */,
 				D4EF1B77296638CC0067E5DD /* CategoryModel.swift in Sources */,
 				D4EF1B5F2964EE910067E5DD /* Extensions.swift in Sources */,
 				D4C625472968942800CCCB08 /* ApiServices.swift in Sources */,
 				D4C625452968941100CCCB08 /* ViewModel.swift in Sources */,
+				D4AD8AA8296C5ED60069C4D0 /* AuctionDetailsTableViewCell.swift in Sources */,
 				D4EF1B642964F8640067E5DD /* PropertiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

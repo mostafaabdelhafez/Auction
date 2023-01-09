@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     }
     func setRoot(){
-        let rootScreenNavBar = UINavigationController(rootViewController: PropertiesViewController.viewControllerfromNib())
+        let rootScreenNavBar = UINavigationController(rootViewController: AuctionDetailsViewController.viewControllerfromNib())
 
         window?.rootViewController = rootScreenNavBar
         window?.makeKeyAndVisible()
