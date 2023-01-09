@@ -12,7 +12,7 @@ class AuctionDetailsViewController: UIViewController {
 
     @IBOutlet weak var tableview:UITableView!{
         didSet{
-            header.height(constant: 500)
+            header.height(constant: 650)
             header.width(constant: UIScreen.main.bounds.width)
             tableview.tableHeaderView = header
             tableview.delegate = self
@@ -29,16 +29,6 @@ class AuctionDetailsViewController: UIViewController {
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 extension AuctionDetailsViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,7 +43,7 @@ extension AuctionDetailsViewController:UITableViewDelegate,UITableViewDataSource
             return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        80
+        60
     }
     
     

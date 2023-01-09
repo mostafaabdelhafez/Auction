@@ -13,6 +13,8 @@ target 'Auction' do
    pod "SearchTextField"
    pod 'DropDown'
    pod 'iOSDropDown'
+   pod 'Cosmos', '~> 23.0'
+
   target 'AuctionTests' do
     inherit! :search_paths
     # Pods for testing

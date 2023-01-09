@@ -134,10 +134,7 @@
 		D4AD8A9B296C4BF60069C4D0 /* AuctionDetails */ = {
 			isa = PBXGroup;
 			children = (
-				D4AD8AA5296C5EC10069C4D0 /* Cell */,
-				D4AD8AA0296C4C8A0069C4D0 /* Header */,
-				D4AD8A9C296C4C170069C4D0 /* AuctionDetailsViewController.swift */,
-				D4AD8A9D296C4C170069C4D0 /* AuctionDetailsViewController.xib */,
+				D4AD8AAA296C8C300069C4D0 /* View */,
 			);
 			path = AuctionDetails;
 			sourceTree = "<group>";
@@ -158,6 +155,49 @@
 				D4AD8AA7296C5ED60069C4D0 /* AuctionDetailsTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		D4AD8AAA296C8C300069C4D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4AD8AAB296C8C390069C4D0 /* ViewController */,
+				D4AD8AA0296C4C8A0069C4D0 /* Header */,
+				D4AD8AA5296C5EC10069C4D0 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4AD8AAB296C8C390069C4D0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D4AD8A9C296C4C170069C4D0 /* AuctionDetailsViewController.swift */,
+				D4AD8A9D296C4C170069C4D0 /* AuctionDetailsViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D4AD8AAC296C8C5E0069C4D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D4C625442968941100CCCB08 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D4AD8AAD296C8C670069C4D0 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				D4C625462968942800CCCB08 /* ApiServices.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		D4AD8AAE296C8C750069C4D0 /* DesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				D43E7793296A61D8004B98E4 /* DropDownFactory.swift */,
+			);
+			path = DesignPatterns;
 			sourceTree = "<group>";
 		};
 		D4EF1B1E2964EDEE0067E5DD = {
@@ -237,11 +277,11 @@
 		D4EF1B602964F83D0067E5DD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				D4AD8AAE296C8C750069C4D0 /* DesignPatterns */,
+				D4AD8AAD296C8C670069C4D0 /* WebService */,
+				D4AD8AAC296C8C5E0069C4D0 /* ViewModel */,
 				D4EF1B75296638BB0067E5DD /* Model */,
 				D4EF1B612964F8450067E5DD /* View */,
-				D4C625442968941100CCCB08 /* ViewModel.swift */,
-				D4C625462968942800CCCB08 /* ApiServices.swift */,
-				D43E7793296A61D8004B98E4 /* DropDownFactory.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
