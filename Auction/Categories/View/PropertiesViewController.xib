@@ -23,13 +23,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4e-wA-Vl6">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <rect key="frame" x="0.0" y="91" width="414" height="771"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhU-H1-4wm">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="771"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3GV-0H-QNN">
-                                    <rect key="frame" x="8" y="0.0" width="398" height="220"/>
+                                    <rect key="frame" x="8" y="16" width="398" height="220"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzS-lb-C6H" customClass="TitledTextField" customModule="Auction" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="398" height="60"/>
@@ -58,14 +58,14 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="3GV-0H-QNN" secondAttribute="trailing" constant="8" id="fm6-Pc-B7n"/>
-                                <constraint firstItem="3GV-0H-QNN" firstAttribute="top" secondItem="KhU-H1-4wm" secondAttribute="top" id="mju-zq-zk1"/>
+                                <constraint firstItem="3GV-0H-QNN" firstAttribute="top" secondItem="KhU-H1-4wm" secondAttribute="top" constant="16" id="mju-zq-zk1"/>
                                 <constraint firstItem="3GV-0H-QNN" firstAttribute="leading" secondItem="KhU-H1-4wm" secondAttribute="leading" constant="8" id="q2v-xx-ee7"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="KhU-H1-4wm" firstAttribute="width" secondItem="c4e-wA-Vl6" secondAttribute="width" id="AAD-YW-HpH"/>
-                        <constraint firstItem="KhU-H1-4wm" firstAttribute="height" secondItem="c4e-wA-Vl6" secondAttribute="height" id="YzB-PJ-BW5"/>
+                        <constraint firstItem="KhU-H1-4wm" firstAttribute="height" secondItem="c4e-wA-Vl6" secondAttribute="height" id="EJs-31-UCB"/>
                         <constraint firstItem="KhU-H1-4wm" firstAttribute="leading" secondItem="c4e-wA-Vl6" secondAttribute="leading" id="hC1-Ja-9dz"/>
                         <constraint firstItem="KhU-H1-4wm" firstAttribute="top" secondItem="c4e-wA-Vl6" secondAttribute="top" id="o4q-dK-ltu"/>
                         <constraint firstAttribute="trailing" secondItem="KhU-H1-4wm" secondAttribute="trailing" id="wGA-Pk-Qeh"/>
@@ -74,12 +74,22 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="dGs-3S-87K"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="Wg8-2j-N6Z"/>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltL-pQ-o2i">
+                    <rect key="frame" x="16" y="44" width="67" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="details"/>
+                    <connections>
+                        <action selector="detailsDidTapped" destination="-1" eventType="touchUpInside" id="Dyc-iJ-MlC"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="ltL-pQ-o2i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="LqX-wo-bIg"/>
+                <constraint firstItem="ltL-pQ-o2i" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Odi-j4-6TH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="c4e-wA-Vl6" secondAttribute="bottom" id="apr-es-Agj"/>
-                <constraint firstItem="c4e-wA-Vl6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="m03-Hw-Hd6"/>
+                <constraint firstItem="c4e-wA-Vl6" firstAttribute="top" secondItem="ltL-pQ-o2i" secondAttribute="bottom" constant="16" id="m03-Hw-Hd6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c4e-wA-Vl6" secondAttribute="trailing" id="nHH-qQ-uAc"/>
                 <constraint firstItem="c4e-wA-Vl6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="x9J-Es-DYC"/>
             </constraints>

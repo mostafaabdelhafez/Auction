@@ -225,9 +225,9 @@
 		D4EF1B292964EDEE0067E5DD /* Auction */ = {
 			isa = PBXGroup;
 			children = (
+				D4EF1B602964F83D0067E5DD /* Categories */,
 				D4AD8A9B296C4BF60069C4D0 /* AuctionDetails */,
 				D4EF1B6629658A9B0067E5DD /* Networking */,
-				D4EF1B602964F83D0067E5DD /* Categories */,
 				D4EF1B5D2964EE860067E5DD /* Helpers */,
 				D4EF1B5A2964EE080067E5DD /* CustomViews */,
 				D4EF1B2A2964EDEE0067E5DD /* AppDelegate.swift */,

@@ -8,6 +8,9 @@
 import UIKit
 import RxSwift
 class PropertiesViewController: UIViewController {
+    @IBAction func detailsDidTapped(){
+        self.navigationController?.pushViewController(AuctionDetailsViewController.viewControllerfromNib(), animated: true)
+    }
     @IBOutlet weak var categoryTextField:TitledTextField!{
         didSet{
             categoryTextField.placeHolder = "Category"
