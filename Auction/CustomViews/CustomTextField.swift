@@ -11,6 +11,12 @@ import SearchTextField
 //import DropDown
 import iOSDropDown
 class TitledTextField:UIView{
+   class func reset(tf:TitledTextField){
+        tf.placeHolder = nil
+        tf.textField.optionArray.removeAll()
+       tf.textField.text = nil
+       tf.isHidden = true
+    }
     var placeHolder:String?{
         didSet{
             placeHolderLabel.text = placeHolder ?? ""
@@ -56,8 +62,6 @@ class TitledTextField:UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
         textField.textAlignment = .left
-//        let gesture = UITapGestureRecognizer(target: self, action: #selector(searchDidTapped))
-//        textField.addGestureRecognizer(gesture)
         addSubview(container)
         container.pinEdgesToSuperviewBounds()
         container.addSubview(textField)

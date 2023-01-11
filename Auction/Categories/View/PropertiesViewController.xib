@@ -29,7 +29,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="771"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3GV-0H-QNN">
-                                    <rect key="frame" x="8" y="16" width="398" height="220"/>
+                                    <rect key="frame" x="8" y="16" width="398" height="140"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzS-lb-C6H" customClass="TitledTextField" customModule="Auction" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="398" height="60"/>
@@ -45,8 +45,8 @@
                                                 <constraint firstAttribute="height" constant="60" id="WUq-9N-Ads"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n6-QS-cQS" customClass="TitledTextField" customModule="Auction" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="160" width="398" height="60"/>
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n6-QS-cQS" customClass="TitledTextField" customModule="Auction" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="140" width="398" height="60"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="0LQ-Jf-1GO"/>

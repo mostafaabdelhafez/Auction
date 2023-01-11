@@ -15,33 +15,43 @@ class PropertiesViewController: UIViewController {
         didSet{
             categoryTextField.placeHolder = "Category"
             categoryTextField.textField.didSelect { [unowned self] selectedText, index, id in
+                self.subCategoryTextField.textField.optionArray = []
+                self.subCategoryTextField.textField.text = nil
                 if selectedText == "other"{
                     self.stack.insertArrangedSubview(DropDownGenerator.createOtherTextField(), at: 1)
                 }
-
-                
                 if let childreen = self.categories[index].children,!childreen.isEmpty{
-                    
                     self.subCategories = childreen
                 }
-            }
-            categoryTextField.textField.listWillAppear {
                 if self.stack.arrangedSubviews[1] != self.subCategoryTextField{
                     self.stack.arrangedSubviews[1].removeFromSuperview()
                 }
-                StackViewHelper.removeStackArrangedViewsFrom(stack: self.stack, except: self.propertyTextField)
-                
+                TitledTextField.reset(tf: self.propertyTextField)
+
+
             }
+//            categoryTextField.textField.listWillAppear {
+//
+//            }
 
         }
     }
     @IBOutlet weak var subCategoryTextField:TitledTextField!{
         didSet{
             subCategoryTextField.placeHolder = "SubCategory"
-            subCategoryTextField.textField.listWillAppear {
+            subCategoryTextField.textField.didSelect { [unowned self] selectedText, index, id in
+                TitledTextField.reset(tf: self.propertyTextField)
+
+            let selectedId = self.subCategories[index].id ?? 0
+                let parent = self.subCategories[index].slug ?? ""
+                self.viewModel.getProperties(id: selectedId,parent:parent)
                 StackViewHelper.removeStackArrangedViewsFrom(stack: self.stack, except: self.propertyTextField)
 
             }
+
+//            subCategoryTextField.textField.listWillAppear {
+//
+//            }
 
 
         }
@@ -50,11 +60,11 @@ class PropertiesViewController: UIViewController {
         didSet{
 
             propertyTextField.textField.listWillAppear {
-                if self.stack.arrangedSubviews.count > 3, self.stack.arrangedSubviews[3] != self.propertyTextField{
-                    self.stack.arrangedSubviews[3].removeFromSuperview()
-                }
-
-                StackViewHelper.removeStackArrangedViewsFrom(stack: self.stack, except: self.propertyTextField)
+//                if self.stack.arrangedSubviews.count > 3, self.stack.arrangedSubviews[3] != self.propertyTextField{
+//                    self.stack.arrangedSubviews[3].removeFromSuperview()
+//                }
+//
+//                StackViewHelper.removeStackArrangedViewsFrom(stack: self.stack, except: self.propertyTextField)
 
             }
 
@@ -75,16 +85,10 @@ class PropertiesViewController: UIViewController {
     }
     var subCategories = [CategoryChild](){
         didSet{
+
             let names = subCategories.map({$0.name ?? ""})
             print(names)
             subCategoryTextField.textField.optionArray = names
-            subCategoryTextField.textField.didSelect { [weak self] selectedText, index, id in
-                
-            let selectedId = self?.subCategories[index].id ?? 0
-                let parent = self?.subCategories[index].slug ?? ""
-                self?.viewModel.getProperties(id: selectedId,parent:parent)
-
-            }
         }
     }
     var propertyChild = Dictionary<String,[SubCategory]>(){
@@ -119,17 +123,18 @@ class PropertiesViewController: UIViewController {
     var properties = Dictionary<String,[SubCategory]>(){
         didSet{
 
+            
             let subs = properties.values.first!
             let name = properties.keys.first!
             let names = properties.values.first!.map({$0.name ?? ""})
             
             let dropDownModel = subs.map({DropDownModel(name: $0.name ?? "", id: $0.id ?? 0) })
-            
+            propertyTextField.isHidden = false
             propertyTextField.textField.optionArray = names
             propertyTextField.placeHolder = name
-            propertyTextField.textField.didSelect { [weak self] selectedText, index, id in
+            propertyTextField.textField.didSelect { [unowned self] selectedText, index, id in
                 if selectedText == "other"{
-                    self?.stack.insertArrangedSubview(DropDownGenerator.createOtherTextField(), at:3 )
+                    self.stack.insertArrangedSubview(DropDownGenerator.createOtherTextField(), at:3 )
                 }
 
                 guard let options = subs.first(where: {$0.id == dropDownModel[index].id})?.options else{return}
@@ -138,18 +143,23 @@ class PropertiesViewController: UIViewController {
             let dropDownModel = options.map({DropDownModel(name:$0.name ?? "", id: $0.id ?? 0) })
                 let names = dropDownModel.map({$0.name })
 
-                DropDownGenerator.create(dropDown: TitledTextField(), with:name, with: names, from: dropDownModel, on: self!.stack) { child in
+                DropDownGenerator.create(dropDown: TitledTextField(), with:name, with: names, from: dropDownModel, on: self.stack) { child in
                     
                     let isThereChild = options.first(where:  {$0.id == child?.id ?? 0})?.child
                     let optionName = options.first(where: {$0.id == child?.id ?? 0})?.name ?? ""
 
                     if isThereChild ?? false{
                         
-                        self?.viewModel.getPropertyChild(id: child?.id ?? 0, parent: optionName)
+                        self.viewModel.getPropertyChild(id: child?.id ?? 0, parent: optionName)
                     }
                 }
 
-                
+                if self.stack.arrangedSubviews.count > 3, self.stack.arrangedSubviews[3] != self.propertyTextField{
+                    self.stack.arrangedSubviews[3].removeFromSuperview()
+                }
+
+                StackViewHelper.removeStackArrangedViewsFrom(stack: self.stack, except: self.propertyTextField)
+
             }
         }
     }
